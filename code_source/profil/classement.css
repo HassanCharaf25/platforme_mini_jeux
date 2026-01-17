@@ -1,0 +1,229 @@
+:root {
+  --primary: #6c63ff;
+  --light-bg: #f5f5f5;
+  --very-light-blue: #f0f0ff;
+  --dark-text: #333;
+  --light-text: #fff;
+  --gold: #ffd700;
+  --silver: #c0c0c0;
+  --bronze: #cd7f32;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--light-bg);
+  color: var(--dark-text);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#back-button {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 20px;
+  align-self: flex-start;
+  transition: background-color 0.2s;
+}
+
+#back-button:hover {
+  background-color: #5a52d9;
+}
+
+.classement-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.jeux-navigation {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.jeux-navigation a {
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: var(--dark-text);
+  background-color: var(--light-bg);
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.jeux-navigation a.active {
+  background-color: var(--primary);
+  color: white;
+}
+
+.jeux-navigation a:hover:not(.active) {
+  background-color: #e5e5e5;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 20px 0;
+}
+
+.user-score {
+  background-color: var(--light-bg);
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.user-score::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: var(--primary);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.user-score h3 {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.user-score p {
+  color: var(--primary);
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.user-score .date {
+  font-size: 13px;
+  color: #888;
+  text-align: center;
+  margin-top: 5px;
+  font-weight: normal;
+}
+
+.scores-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.scores-table th {
+  background-color: var(--primary);
+  color: white;
+  padding: 12px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.scores-table th:first-child {
+  border-top-left-radius: 5px;
+}
+
+.scores-table th:last-child {
+  border-top-right-radius: 5px;
+}
+
+.scores-table tr:nth-child(-n+3) {
+  background-color: var(--very-light-blue);
+}
+
+.scores-table tr:nth-child(n+4):nth-child(odd) {
+  background-color: white;
+}
+
+.scores-table tr:nth-child(n+4):nth-child(even) {
+  background-color: var(--light-bg);
+}
+
+.scores-table td {
+  padding: 12px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.scores-table tr:nth-child(1) td:first-child::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--gold);
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.scores-table tr:nth-child(2) td:first-child::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--silver);
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.scores-table tr:nth-child(3) td:first-child::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--bronze);
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.scores-table tr.current-user {
+  background-color: rgba(108, 99, 255, 0.1) !important;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .classement-container {
+    padding: 20px 15px;
+  }
+  
+  .jeux-navigation {
+    flex-wrap: wrap;
+  }
+  
+  .scores-table th, 
+  .scores-table td {
+    padding: 10px 5px;
+    font-size: 13px;
+  }
+}
