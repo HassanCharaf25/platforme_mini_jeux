@@ -1,0 +1,224 @@
+:root {
+  --primary: #4361ee;
+  --secondary: #3a0ca3;
+  --accent: #f72585;
+  --light: #f8f9fa;
+  --dark: #212529;
+  --gray: #6c757d;
+  --success: #4cc9f0;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --border-radius: 10px;
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f5f8ff;
+  color: var(--dark);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+.login-container {
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  width: 100%;
+  max-width: 450px;
+  padding: 2.5rem;
+  margin: 2rem auto;
+}
+
+h1 {
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 1.8rem;
+  font-weight: 700;
+  font-size: 2.2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 500;
+  margin-bottom: 0rem;
+  color: var(--gray);
+}
+
+input {
+  padding: 0.5rem;
+  margin-bottom: 0rem;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+input:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.3);
+}
+
+button[type="submit"] {
+  background-color: #212529;
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+  font-weight: 600;
+  text-align: center;
+  margin: 0.5rem 0 1rem 0;
+}
+
+button[type="submit"]:hover {
+  background-color: #2c3136;
+  box-shadow: var(--shadow);
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--secondary);
+  text-decoration: underline;
+}
+
+p {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.error-message {
+  color: white;
+  background-color: var(--accent);
+  padding: 0.75rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-container {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.home-link {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.home-link a {
+  display: inline-block;
+  color: var(--gray);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.home-link a:hover {
+  color: var(--primary);
+}
+
+footer {
+  background-color: #212529;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  width: 100%;
+  margin-top: auto;
+}
+
+footer p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .login-container {
+    width: 90%;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  input, button[type="submit"] {
+    padding: 0.7rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+  
+  .login-container {
+    background-color: #1e1e1e;
+  }
+  
+  input {
+    background-color: #2a2a2a;
+    border-color: #333;
+    color: #e0e0e0;
+  }
+  
+  label {
+    color: #b0b0b0;
+  }
+}
+#back-button {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: var(--border-radius);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+#back-button:hover {
+  background-color: var(--secondary);
+  box-shadow: var(--shadow);
+}
