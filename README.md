@@ -29,7 +29,7 @@ C:\xampp\htdocs\
 - Démarrer MySQL
 
 ### Ouvrir le projet dans le navigateur :
-http://localhost/platforme_mini_jeux/
+http://localhost/platforme_mini_jeux/code_source/index/
 
 ## Auteurs :
 * **CHARAF Hassan** 
