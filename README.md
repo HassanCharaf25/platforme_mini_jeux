@@ -25,8 +25,8 @@ git clone https://github.com/HassanCharaf25/platforme_mini_jeux/
 C:\xampp\htdocs\
 
 ### Lancer XAMPP :
--Démarrer Apache
--Démarrer MySQL
+*Démarrer Apache
+*Démarrer MySQL
 
 ### Ouvrir le projet dans le navigateur :
 http://localhost/platforme_mini_jeux/
